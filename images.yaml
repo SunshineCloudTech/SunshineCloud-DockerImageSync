@@ -1,0 +1,9 @@
+# Docker镜像同步配置文件
+# 格式: "源镜像:标签1,标签2": "目标镜像:标签"
+# 示例:
+# "nginx:latest,alpine,1.21": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/nginx"
+# "redis:latest": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/redis:latest"
+# "mysql:8.0": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/mysql:8.0"
+
+# 当前配置的镜像同步规则
+"debian:bullseye-slim,bookworm-slim": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/debian"

@@ -1,0 +1,51 @@
+name: Sync Docker images
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    # every day at 7am & 7pm pacific
+    - cron: "0 2,14 * * *"
+    
+jobs:
+  sync-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: "Optimize Disk Space"
+        uses: "hugoalh/disk-space-optimizer-ghaction@v0.8.0"
+        with:
+          operate_sudo: "True"
+          general_include: ".+"
+          docker_include: ".+"
+          docker_prune: "True"
+          docker_clean: "True"
+          apt_prune: "True"
+          apt_clean: "True"
+          homebrew_prune: "True"
+          homebrew_clean: "True"
+          npm_prune: "True"
+          npm_clean: "True"
+          os_swap: "True"
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker
+        uses: docker/setup-docker-action@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - uses: hhyasdf/image-sync-action@v1.1
+        with:
+          auth_file: ./auth.yaml
+          images_file: ./images.yaml
+          version: latest
+          proc: 10
+        env:
+          SUNSHINECLOUD_ACR_PASSWORD: ${{ secrets.SUNSHINECLOUD_ACR_PASSWORD }}       

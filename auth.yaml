@@ -1,0 +1,10 @@
+# Docker注册表认证配置文件
+# 用于配置目标注册表的认证信息
+# 格式: 注册表地址/命名空间:
+#         username: 用户名
+#         password: 密码(支持环境变量)
+
+# 阿里云容器镜像服务配置
+registry.cn-hangzhou.aliyuncs.com/sunshinecloud:
+  password: ${SUNSHINECLOUD_ACR_PASSWORD}
+  username: SunshineCloudTech
