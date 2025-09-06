@@ -7,3 +7,8 @@
 
 # 当前配置的镜像同步规则
 "debian:bullseye-slim,bookworm-slim": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/debian"
+"sunshinecloud007/sunshinecloud-universal-desktop:latest": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/sunshinecloud-universal-desktop:latest"
+"sunshinecloud007/sunshinecloud-comfyui-selfhosted": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/sunshinecloud-comfyui-selfhosted"
+"sunshinecloud007/sunshinecloud-stable-diffusion-webui-forge-selfhosted": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/sunshinecloud-stable-diffusion-webui-forge-selfhosted"
+"sunshinecloud007/sunshinecloud-stable-diffusion-webui-selfhosted": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/sunshinecloud-stable-diffusion-webui-selfhosted"
+"sunshinecloud007/sunshinecloud-fooocus-selfhosted": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/sunshinecloud-fooocus-selfhosted"
