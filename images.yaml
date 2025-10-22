@@ -6,8 +6,8 @@
 # "mysql:8.0": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/mysql:8.0"
 
 # 当前配置的镜像同步规则
-"debian:bullseye-slim,bookworm-slim": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/debian"
-"buildpack-deps": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/buildpack-deps"
+# "debian": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/debian"
+# "buildpack-deps": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/buildpack-deps"
 
 # Desktop 版本镜像
 "sunshinecloud007/sunshinecloud-universal-desktop:latest": "registry.cn-hangzhou.aliyuncs.com/sunshinecloud/sunshinecloud-universal-desktop:latest"
